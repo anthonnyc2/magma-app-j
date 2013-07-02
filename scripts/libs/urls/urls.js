@@ -6,7 +6,7 @@ define(function() {
 		destacados		: 'http://www.publicaenmagma.com/api/destacados/',
 		//destacados		: 'search.json',
 		detalle_evento          : 'http://www.publicaenmagma.com/api/detalleEvento/',
-		img_evento		: 'http://www.publicaenmagma.com/data/img/thumbs/',
+		img_evento		: 'http://www.publicaenmagma.com/data/img/',
 		categorias		: 'http://www.publicaenmagma.com/api/categorias/',
 		subcategorias           : 'http://www.publicaenmagma.com/api/subcategorias/<id_cat>',
 		busqueda		: 'http://www.publicaenmagma.com/?p=api&m=search&a=<string_busqueda>',
