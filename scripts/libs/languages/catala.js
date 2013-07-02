@@ -37,7 +37,7 @@ define(function() {
 		
 		more_button_idioma : 'Idioma',
 		more_button_informacion : 'Informaci&oacute;',
-		more_info_app : '<b>Magma Agenda de Mallorca</b><br />&eacute;s una app gratu&iuml;ta, per a iOS i Android, que et permet estar al dia dels diferents actes i activitats culturals que es realitzen a l\'illa. Pots fer un cop d\'ull a tot el que hi ha publicat o consultar per categories, realitzar cerques personalitzades, afegir actes als teus Favorits, localitzar-los en el mapa i compartir-los amb els teus amics.<br /><br />I si vols que els teus actes culturals apareguin en l\'app, entra al nostre web<br /><b>www.publicaenmagma.es</b><br />i comen&ccedil;a a publicar!',
+		more_info_app : '<b>Magma Agenda de Mallorca</b><br />&eacute;s una app gratu&iuml;ta, per a iOS i Android, que et permet estar al dia dels diferents actes i activitats culturals que es realitzen a l\'illa. Pots fer un cop d\'ull a tot el que hi ha publicat o consultar per categories, realitzar cerques personalitzades, afegir actes als teus Favorits, localitzar-los en el mapa i compartir-los amb els teus amics.<br /><br />I si vols que els teus actes culturals apareguin en l\'app, entra al nostre web<br /><b>(www.publicaenmagma.com)</b><br />i comen&ccedil;a a publicar!',
 		
 		
 		
@@ -71,10 +71,10 @@ define(function() {
 		
 		favoritos_title : 'Favorits',
 		favoritos_noevents : 'No t&eacute; esdeveniments marcats com a Favorits.',
-		favoritos_button_agregarfavorito : 'Afegir a favorits',
-		favoritos_text_favoritoagregado : 'Afegit a favorits.',
-		favoritos_button_eliminarfavorito : 'Eliminar de favorits',
-		favoritos_text_favoritoeliminado : 'Eliminat de favorits.',
+		favoritos_button_agregarfavorito : 'Afegir a Favorits',
+		favoritos_text_favoritoagregado : 'Afegit a Favorits.',
+		favoritos_button_eliminarfavorito : 'Eliminar de Favorits',
+		favoritos_text_favoritoeliminado : 'Eliminat de Favorits.',
 		
 		
 		
@@ -131,7 +131,7 @@ define(function() {
 		
 		eventos_navbar_compartir : 'Compartir',
 		eventos_navbar_agregarfavorito : 'Afegir a Favorits',
-		eventos_navbar_removerfavorito : 'Remoure de Favorits',
+		eventos_navbar_removerfavorito : 'Eliminar de Favorits',
 		eventos_navbar_mapa : 'Mapa',
 		
 		eventos_mapa_nodisponible : 'El mapa per aquest esdeveniment no està disponible.',

@@ -588,7 +588,7 @@ div.subcat a h4
 #detalleEvento-content div.evento_masinfo div.evento div.info.info_donde
 {
 /* 	font-family: Times; */
-	font-style: italic;
+/* 	font-style: italic; */
 	font-size: 8.25pt;
 }
 
@@ -806,4 +806,8 @@ form#buscador_form a#buscar .ui-btn-inner .ui-btn-text
  
  .ui-btn-inner {
 border-top:none;
+}
+
+.ui-page-active {
+background: #fff !important;
 }

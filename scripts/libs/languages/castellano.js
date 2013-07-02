@@ -37,7 +37,7 @@ define(function() {
 		
 		more_button_idioma : 'Idioma',
 		more_button_informacion : 'Informaci&oacute;n',
-		more_info_app : '<b>Magma Agenda de Mallorca</b><br />es una app gratuita, para iOS y Android, que te permite estar al d&iacute;a de los distintos eventos y actividades culturales que se realizan en la isla. Puedes echar un vistazo a todo lo que hay publicado o consultar por categor&iacute;as, realizar b&uacute;squedas personalizadas, a&ntilde;adir eventos a tus Favoritos, localizarlos en el mapa y compartirlos con tus amigos.<br /><br />Y si quieres que tus eventos aparezcan en la app, entra en nuestra web<br /><b>(www.publicaenmagma.es)</b><br/>y &iexcl;empieza a publicar!',
+		more_info_app : '<b>Magma Agenda de Mallorca</b><br />es una app gratuita, para iOS y Android, que te permite estar al d&iacute;a de los distintos eventos y actividades culturales que se realizan en la isla. Puedes echar un vistazo a todo lo que hay publicado o consultar por categor&iacute;as, realizar b&uacute;squedas personalizadas, a&ntilde;adir eventos a tus Favoritos, localizarlos en el mapa y compartirlos con tus amigos.<br /><br />Y si quieres que tus eventos aparezcan en la app, entra en nuestra web<br /><b>(www.publicaenmagma.com)</b><br/>y &iexcl;empieza a publicar!',
 		
 		
 		
@@ -83,7 +83,7 @@ define(function() {
 		buscador_title : 'Buscador',
 		
 		buscador_error_alert_title : 'Falta información',
-		buscador_error_alert_button : 'Cerrar',
+		buscador_error_alert_button : 'Cancelar',
 		buscador_error_sin_texto : 'No se ha especificado un texto para buscar.',
 		
 		buscador_resultados_busqueda_title : 'Resultados',
@@ -129,7 +129,7 @@ define(function() {
 		
 		eventos_navbar_compartir : 'Compartir',
 		eventos_navbar_agregarfavorito : 'Añadir a Favoritos',
-		eventos_navbar_removerfavorito : 'Remover de Favoritos',
+		eventos_navbar_removerfavorito : 'Eliminar de Favoritos',
 		eventos_navbar_mapa : 'Mapa',
 		
 		eventos_mapa_nodisponible : 'El mapa para este evento no está disponible.',
