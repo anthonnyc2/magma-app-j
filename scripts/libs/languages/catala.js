@@ -93,8 +93,8 @@ define(function() {
 		buscador_string_porpalabras : 'Per paraules',
 		buscador_string_porfiltros : 'Per filtres',
 		
-		buscador_select_categoria : 'Categoria',
-		buscador_select_municipio : 'Municipi',
+		buscador_select_categoria : 'Totes les categories',
+		buscador_select_municipio : 'Totes les municipis',
 		buscador_select_fecha : 'Data',
 		buscador_select_precio : 'Preu',
 		

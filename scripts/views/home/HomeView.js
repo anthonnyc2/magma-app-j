@@ -22,7 +22,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/more/Mor
             },
             
             initialize:function()
-            {
+            { 
             	var $this = this;
             	$this.destacadosList = [];
             	$this.loading = true;
@@ -121,7 +121,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/more/Mor
             
             redrawView:function() // Solo en la HomeView, que se carga antes de la selecciÃ³n de idioma y queda en background
             {
-            	// Refrescar el t’tulo y fecha de la secci—n
+            	// Refrescar el tï¿½tulo y fecha de la secciï¿½n
             	// Refrescar el tÃ­tulo y fecha de la secciÃ³n
             	$(".barra_titulo_seccion .titulo_seccion").html(lang.getString("destacados_title"));
             	$(".barra_titulo_seccion .date").html(lang.getDate());

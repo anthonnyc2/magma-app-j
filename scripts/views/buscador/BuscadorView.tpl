@@ -18,7 +18,8 @@
 
 
 <!-- HOME - content -->
-<div data-role="content" id="categorias-content">
+<div id="loading_msg" style="margin: 15px 30px"><%= loading %></div>
+<div data-role="content" id="categorias-content" style="display:none">
 	
 	<form id="buscador_form" action="#" method="post" data-ajax="false">
 		<div data-role="fieldcontain">

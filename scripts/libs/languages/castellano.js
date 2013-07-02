@@ -92,8 +92,8 @@ define(function() {
 		buscador_string_porpalabras : 'Por palabras',
 		buscador_string_porfiltros : 'Por filtros',
 		
-		buscador_select_categoria : 'Categoría',
-		buscador_select_municipio : 'Municipio',
+		buscador_select_categoria : 'Todas las categorías',
+		buscador_select_municipio : 'Todos los municipios',
 		buscador_select_fecha : 'Fecha',
 		buscador_select_precio : 'Precio',
 		

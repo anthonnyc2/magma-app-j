@@ -14,7 +14,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/buscador
 			lista_municipios : [],
 			
             events:{
-            	'pagebeforeshow' : 'redrawView',
+            	//'pagebeforeshow' : 'redrawView',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
                 'click .more_button' : 'More_clickHandler',
                 'click .ui-footer .ui-navbar ul li a' : 'navBar_clickHandler',
@@ -100,6 +100,12 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/buscador
             			obj_mun.append("<option value=\"" + id_mun + "\">" + nombre_mun + "</option>");
             		}
             		
+                        if ( typeof this.lista_subCategorias != 'undefined' && this.lista_subCategorias.length > 0 )
+                        {
+                            $("#loading_msg").css({'display':'none'});
+                            $("#categorias-content").css({'display':'block'});
+                        }
+            		
             		//obj.html(HTML).selectmenu('refresh', true);
             	}
             },
@@ -155,6 +161,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/buscador
             				
             				return (A < B) ? -1 : ( (A > B) ? 1 : 0 );
             			});
+                                setTimeout(function() {$this.loadSubCategorias();}, 100);
             			
             			// Agregar elemento "Todas las categorías"
 		    			/*var allCategoriesEl = {
@@ -167,9 +174,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/buscador
             	});
             	
             	var cats = new Categories();
-            	cats.fetch();
-                
-                setTimeout(function() {$this.loadSubCategorias();}, 100);
+            	cats.fetch(); 
             },
             
             loadSubCategorias:function()
@@ -243,7 +248,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/buscador
             				return (A < B) ? -1 : ( (A > B) ? 1 : 0 );
             			});
             			
-            			//$this.redrawView();
+            			$this.redrawView();
             		}
             	});
             	
