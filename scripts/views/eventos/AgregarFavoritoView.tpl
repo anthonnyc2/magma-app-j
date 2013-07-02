@@ -24,6 +24,6 @@
 			<a href="#" data-role="button" id="button-agregarfavorito"><%= texto_boton %></a>
 		</div>
 		<br />
-		<a href="#detalleEvento" class="button" data-transition="" data-role="button" id="favoritos_cerrar">Cerrar</a>
+		<a href="#detalleEvento" class="button" data-transition="" data-role="button" id="favoritos_cerrar"><%= eventos_compartir_button_cancelar %></a>
 	</div>
 </div>

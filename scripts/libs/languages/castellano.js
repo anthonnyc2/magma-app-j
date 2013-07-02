@@ -70,10 +70,10 @@ define(function() {
 		
 		favoritos_title : 'Favoritos',
 		favoritos_noevents : 'No hay eventos marcados como Favoritos.',
-		favoritos_button_agregarfavorito : 'Añadir a favoritos',
-		favoritos_text_favoritoagregado : 'Añadido a favoritos.',
-		favoritos_button_eliminarfavorito : 'Eliminar de favoritos',
-		favoritos_text_favoritoeliminado : 'Eliminado de favoritos.',
+		favoritos_button_agregarfavorito : 'Añadir a Favoritos',
+		favoritos_text_favoritoagregado : 'Añadido a Favoritos.',
+		favoritos_button_eliminarfavorito : 'Eliminar de Favoritos',
+		favoritos_text_favoritoeliminado : 'Eliminado de Favoritos.',
 		
 		
 		
