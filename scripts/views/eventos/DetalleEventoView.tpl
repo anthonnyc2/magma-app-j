@@ -24,14 +24,20 @@
 	var evento_fechafin = temp_fechafin.join("/");
 	 
 	var evento_string_fechas;
-	if (evento_fechainicio == evento_fechafin) // Una sola fecha
+	if (evento_fechainicio == evento_fechafin && detalles_evento['cancelado'] != '1') // Una sola fecha
 	{
-		evento_string_fechas = eventos_detalle_cuando_fecha_simple.replace("<fecha_inicio>", evento_fechainicio);
+            evento_string_fechas = eventos_detalle_cuando_fecha_simple.replace("<fecha_inicio>", evento_fechainicio);
 	}
-	else // Fecha de inicio y final diferentes
+	else if(detalles_evento['cancelado'] != '1') // Fecha de inicio y final diferentes
 	{
-		evento_string_fechas = eventos_detalle_cuando_fecha_doble.replace("<fecha_inicio>", evento_fechainicio).replace("<fecha_fin>", evento_fechafin);
+            evento_string_fechas = eventos_detalle_cuando_fecha_doble.replace("<fecha_inicio>", evento_fechainicio).replace("<fecha_fin>", evento_fechafin);
 	}
+        else{
+            if(language_suffix == "esp")
+                evento_string_fechas = "CANCELADO";
+            else if(language_suffix == "cat")
+                evento_string_fechas = "CANCEL&middot;LAT";
+        }
 	
 	
 	/*

@@ -161,6 +161,7 @@ define(function() {
 		eventos_detalle_masinfo : '+ INFO',
 		
 		eventos_detalle_donde_lugar : 'Lloc',
+                eventos_detalle_cancelado : 'CANCEL&middot;LAT',
 		eventos_detalle_donde_direccion : 'Adre&ccedil;a',
 		eventos_detalle_donde_municipio : 'Municipi',
 		

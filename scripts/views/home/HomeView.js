@@ -154,6 +154,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/more/Mor
             		var categorias = obj["categoria_" + lang.getString('language_suffix')];
             		var titulo = obj["titulo_" + lang.getString('language_suffix')];
             		var lugar = obj['lugar'];
+                        var cancelado = obj['cancelado']; 
             		
             		// Formatear precio del evento
             		var precio_raw = obj['precio'];
@@ -184,10 +185,12 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/more/Mor
             		HTML += "<div class=\"titulo\">" + titulo + "</div>";
             		HTML += "<img src=\"images/navigation/forward.jpg\" alt=\"\" />";
             		HTML += "<div class=\"lugar\">" + lugar + "</div>"
-                        if(fecha != fechaFin)
-                            HTML += "<div class=\"fecha\">" + lang.getString('eventos_title_varios_dias_1') + " " + fecha + " " + lang.getString('eventos_title_varios_dias_2') + " " + fechaFin + "</div>"
+                        if(cancelado == '1')
+                            HTML += "<div class=\"fecha\">" + lang.getString('eventos_detalle_cancelado') + "</div>";
+                        else if(fecha != fechaFin)
+                            HTML += "<div class=\"fecha\">" + lang.getString('eventos_title_varios_dias_1') + " " + fecha + " " + lang.getString('eventos_title_varios_dias_2') + " " + fechaFin + "</div>";
                         else
-                            HTML += "<div class=\"fecha\">" + fecha + "</div>"
+                            HTML += "<div class=\"fecha\">" + fecha + "</div>";
             		HTML += "<div class=\"precio\">" + precio + "</div>"
             		HTML += "</a></div>";
             		

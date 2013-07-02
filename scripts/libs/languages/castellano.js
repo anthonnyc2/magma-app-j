@@ -159,6 +159,7 @@ define(function() {
 		eventos_detalle_masinfo : '+ INFO',
 		
 		eventos_detalle_donde_lugar : 'Lugar',
+                eventos_detalle_cancelado : 'CANCELADO',
 		eventos_detalle_donde_direccion : 'Dirección',
 		eventos_detalle_donde_municipio : 'Municipio',
 		
