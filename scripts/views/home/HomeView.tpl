@@ -8,7 +8,7 @@
         text-overflow: ellipsis;
     }
 </style>
-<div data-role="header" data-id="home-header" id="home-header" data-position="fixed">
+<div data-role="header" data-tap-toggle="false" data-id="home-header" id="home-header" data-position="fixed">
 	<!--<a data-rel="back" href="#"><img src="images/navigation/back.jpg" alt="" /></a>-->
 	<a href="#more" class="ui-btn-right more_button"><img src="images/navigation/more.png" alt="" /></a>
 	<a href="#home" class="magma_logo"><img src="images/navigation/magma_logo.png" alt="" /></a>
@@ -41,7 +41,7 @@
 
 
 <!-- HOME - footer -->
-<div data-role="footer" data-id="home-footer" id="home-footer" data-position="fixed">
+<div data-role="footer" data-tap-toggle="false" data-id="home-footer" id="home-footer" data-position="fixed">
 	<div data-role="navbar" data-iconpos="top">
 		<ul>
 			<li>
