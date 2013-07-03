@@ -5,7 +5,7 @@
 	var texto_boton = operacion_agregar ? favoritos_button_agregarfavorito : favoritos_button_eliminarfavorito;
 %>
 <!-- HOME - header -->
-<div data-role="header" data-tap-toggle="false" data-id="detalleEvento-header" id="detalleEvento-header" data-position="fixed">
+<div data-role="header" data-tap-toggle="false" data-id="foo1" id="detalleEvento-header" data-position="fixed">
 	<a data-rel="back" href="#detalleEvento"><img src="images/navigation/back.jpg" alt="" /></a>
 	<a data-transition="slide" href="#more"><img src="images/navigation/more.png" alt="" /></a>
 	

@@ -109,7 +109,7 @@
 %>
 
 <!-- HOME - header -->
-<div data-role="header" data-tap-toggle="false" data-id="detalleEvento-header" id="detalleEvento-header" data-position="fixed">
+<div data-role="header" data-tap-toggle="false" data-id="foo1" id="detalleEvento-header" data-position="fixed">
 	<a data-rel="back" href="#"><img src="images/navigation/back.jpg" alt="" /></a>
 	<a href="#more" class="ui-btn-right more_button"><img src="images/navigation/more.png" alt="" /></a>
 	

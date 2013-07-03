@@ -14,7 +14,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
 			idCat: null,
 			
             events:{
-            	'pageshow' : 'redrawView',
+            	'pagebeforeshow' : 'redrawView',
             	'click .more_button' : 'More_clickHandler',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
                 'click .ui-footer .ui-navbar ul li a' : 'navBar_clickHandler',

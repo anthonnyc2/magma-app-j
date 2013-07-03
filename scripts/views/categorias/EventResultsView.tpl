@@ -1,5 +1,5 @@
 <!-- HOME - header -->
-<div data-role="header" data-tap-toggle="false" data-id="categorias-header" id="categorias-header" data-position="fixed">
+<div data-role="header" data-tap-toggle="false" data-id="foo1" id="categorias-header" data-position="fixed">
 	<a data-rel="back" href="#categorias"><img src="images/navigation/back.jpg" alt="" /></a>
 	<a data-transition="slide" href="#more"><img src="images/navigation/more.png" alt="" /></a>
 	
