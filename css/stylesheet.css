@@ -28,7 +28,7 @@ body
 {
 	min-height: 100%;
 	background-color: #ffffff;
-	padding: 15px 35px 15px 35px;
+	/* padding: 15px 35px 15px 35px; */
 }
 .more_idim{
 	background-image: url(../images/seleccionidioma/background.png) /* blanco */
