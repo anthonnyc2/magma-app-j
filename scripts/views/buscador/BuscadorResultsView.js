@@ -19,7 +19,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
 			rango_precio : '',
 			
             events:{
-            	//'pageshow' : 'redrawView',
+            	'pagebeforeshow' : 'redrawView',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
                 'click .more_button' : 'More_clickHandler',
                 'click a[data-rel=back]' : 'btnBack_clickHandler',
@@ -35,7 +35,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             },
             
             initialize: function(_string_busqueda, _id_cat, cat_subcat, _municipio, _dias, _rango_precio)
-            {
+            { 
             	var $this = this;
             	
             	$this.loading = true;
@@ -214,6 +214,9 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
 
             redrawView: function()
             {
+                // Para actualizar correctamente el elemento titulo_seleccion en la pagina detalles
+                window.localStorage.setItem('prevPage','pagBusqueda')
+                $(".titulo_seccion").html(lang.getString("home_navbar_buscador"));
             	var content = $("#eventresults-content");
             	content.html( this.loading ? lang.getString('loading') : ( this.lista_resultados.length > 0 ? '' : lang.getString('buscador_resultados_busqueda_noevents') ) );
             	

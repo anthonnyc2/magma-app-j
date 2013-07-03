@@ -199,7 +199,7 @@
 
 
 <!-- HOME - footer -->
-<div data-role="footer" data-id="evento-footer" id="evento-footer" data-position="fixed">
+<div data-role="footer" data-tap-toggle="false" data-id="evento-footer" id="evento-footer" data-position="fixed">
 	<div data-role="navbar" data-iconpos="top">
 		<ul>
 			<li>

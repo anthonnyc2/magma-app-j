@@ -47,6 +47,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             		
             		parse:function(resp)
             		{
+                            //if(resp != ''){
             			$this.subcategoriasList = resp;
             			$this.subcategoriasList.sort(function(a,b) {
             				var text = "subcategoria_" + lang.getString('language_suffix');
@@ -55,7 +56,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             				return (A < B) ? -1 : ( (A > B) ? 1 : 0 );
             			});
             			
-            			// Agregar elemento "Todas las subcategorías" al inicio
+            			// Agregar elemento "Todas las subcategorías" al inicio 
             			var allSubcatsEl = {
             				id: -1
             			};
@@ -63,6 +64,11 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             			$this.subcategoriasList.unshift(allSubcatsEl);
             			
             			$this.redrawView();
+                            /*}
+                            else{
+                                alert("no hay subcategorias")
+                                $this.subcat_clickHandler();
+                            }*/
             		}
             	});
             	
@@ -121,8 +127,9 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             redrawView: function()
             {
             	// Refrescar el título y fecha de la sección
-            	$(".barra_titulo_seccion .titulo_seccion").html(lang.getCategoryName(this.idCat, urls));
-            	$(".barra_titulo_seccion .date").html(lang.getDate());
+            	//$(".barra_titulo_seccion .titulo_seccion").html(lang.getCategoryName(this.idCat, urls));
+            	$(".ui-header .barra_titulo_seccion .titulo_seccion").html(lang.getString('categorias_title'));
+            	$(".barra_titulo_seccion .date").html(lang.getDate()); 
             	
             	// Refrescar la barra de navegación
             	var navBarLinks = $(".ui-footer .ui-navbar ul li a");
@@ -149,16 +156,31 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             
             subcat_clickHandler:function(evt)
             {
-            	evt.preventDefault();
-            	var id_attr = $(evt.currentTarget).attr('id');
-            	var id_cat = this.idCat;
-            	var nombre_cat = this.nombreCat;
-            	
-            	var id_subcat = id_attr.substring(16, id_attr.length);
-            	var nombre_subcat = $("h4", evt.currentTarget).text();
-            	
-				var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
-            	$.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
+                
+                //if(typeof evt != 'undefined'){
+                    evt.preventDefault();
+                    var id_attr = $(evt.currentTarget).attr('id');
+                    var id_cat = this.idCat;
+                    var nombre_cat = this.nombreCat;
+
+                    var id_subcat = id_attr.substring(16, id_attr.length);
+                    var nombre_subcat = $("h4", evt.currentTarget).text(); 
+
+                    var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
+                    $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
+                /*}
+                else{
+                    var id_cat = this.idCat;
+                    var nombre_cat = this.nombreCat;
+
+                    var id_subcat = -1
+                    var nombre_subcat = ""
+                    
+                    alert("No tiene sub lleno todas "+$this.idCat+"-"+id_cat);
+
+                    var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
+                    $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
+                }*/
             }
 
         });

@@ -22,7 +22,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/more/Mor
             },
             
             initialize:function()
-            { 
+            {  
             	var $this = this;
             	$this.destacadosList = [];
             	$this.loading = true;

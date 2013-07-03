@@ -21,7 +21,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             
             initialize: function(infoEvento)
             {
-            	// Forzar recarga de la informaci—n del evento
+            	// Forzar recarga de la informaciï¿½n del evento
         		var EventoModel = Backbone.Model.extend({
         			urlRoot: urls.detalle_evento,
         			
@@ -129,10 +129,12 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             
             redrawView:function(event, data)
             { 
-                if(window.localStorage.getItem('prevPage') == "favoritos"){
-                    $(".titulo_seccion").html(lang.getString('home_navbar_favoritos'));
-                    window.localStorage.setItem('prevPage','');
-                }
+                if(window.localStorage.getItem('prevPage') == "pagFavoritos")
+                    $(".titulo_seccion").html(lang.getString("favoritos_title")); 
+                else if(window.localStorage.getItem('prevPage') == "pagBusqueda")
+                    $(".titulo_seccion").html(lang.getString("home_navbar_buscador")); 
+                else if(window.localStorage.getItem('prevPage') == "pagCategorias")
+                    $(".titulo_seccion").html(lang.getString("categorias_title")); 
                 else
                     $(".titulo_seccion").html(lang.getString('eventos_detalle_titulo'));
                 

@@ -72,8 +72,8 @@ define(['require', 'urls', 'languages', 'jquery', 'underscore', 'Backbone', 'vie
             
             redrawView: function()
             {
-                // Para actualizar correctamente el elemento titulo_seleccion en la p�gina detalles
-                window.localStorage.setItem('prevPage','favoritos')
+                // Para actualizar correctamente el elemento titulo_seleccion en la pagina detalles
+                window.localStorage.setItem('prevPage','pagFavoritos')
                 
             	// Refrescar el título y fecha de la sección
             	$(".barra_titulo_seccion .titulo_seccion").html(lang.getString("favoritos_title"));

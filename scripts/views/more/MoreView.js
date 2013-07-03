@@ -18,7 +18,7 @@ define(['languages', 'jquery', 'underscore', 'Backbone', 'text!views/more/MoreVi
             },
             
             initialize:function() 
-            {
+            { 
             },
             
             render:function () {

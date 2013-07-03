@@ -27,7 +27,6 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             initialize: function(id_cat, nombre_cat, id_subcat, nombre_subcat)
             {
             	var $this = this;
-            	
             	$this.loading = true;
             	
             	$this.idCat = id_cat;
@@ -76,6 +75,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             	else if (id_subcat == -1) // Todas las subcategorías de la categoría
             	{
             		url_peticion = urls.eventos_cat.replace("<id_cat>", id_cat);
+                        //alert(url_peticion);
             	}
             	else // Eventos de la subcategoría especificada
             	{
@@ -84,7 +84,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             	
             	var EventosCollection = Backbone.Collection.extend({
             		model	: EventosModel,
-            		url		: url_peticion,
+            		url	: url_peticion,
             		
             		parse:function(resp)
             		{
@@ -149,9 +149,13 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             
             redrawView: function()
             {
-            	$(".ui-header .barra_titulo_seccion .titulo_seccion").html(this.nombreSubcat || this.nombreCat);
+                // Para actualizar correctamente el elemento titulo_seleccion en la pagina detalles
+                window.localStorage.setItem('prevPage','pagCategorias')
+                
+            	//$(".ui-header .barra_titulo_seccion .titulo_seccion").html(this.nombreSubcat || this.nombreCat);
+            	$(".ui-header .barra_titulo_seccion .titulo_seccion").html(lang.getString('categorias_title')); 
             	$(".barra_titulo_seccion .date").html(lang.getDate());
-            	
+            	 
             	var no_events = this.idCat == -1 ? lang.getString('categorias_noevents') : lang.getString('categorias_subcategoria_noevents');
             	var content = $("#eventresults-content");
             	content.html( this.loading ? lang.getString('loading') : ( this.eventosList.length > 0 ? '' : no_events ) );

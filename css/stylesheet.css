@@ -14,9 +14,9 @@ body
 	background-color: #ffffff; /* blanco */
 }
 
-.ui-state-persist > .ui-btn-inner{
+/*.ui-state-persist > .ui-btn-inner{
     background-color: rgb(190, 10, 60) !important;
-}
+}*/
 
 /*.ui-page
 {
