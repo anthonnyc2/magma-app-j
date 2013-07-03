@@ -244,8 +244,9 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
                             var decimal = precio.substring(precio.length-4,precio.length);
                             var entero = precio.substring(0,precio.length-4);
                             precio = entero+","+decimal;
-                        }
                         precio = precio.replace(/ /g,'');
+                        }
+
                         
                         
             		//var precio = obj['precio'] > 0 ? lang.getString('eventos_detalle_precio_simple').replace("<precio>", obj['precio']) : lang.getString('eventos_detalle_precio_gratis');
@@ -257,17 +258,17 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             		var fechaFin = fechaTempFin[2] + "/" + fechaTempFin[1] + "/" + fechaTempFin[0];
             		
             		var HTML = "<div class=\"destacados_home\"><a href=\"#detalleEvento\" class=\"ui-btn\" id=\"evento-" + i + "\">";
-            		HTML += "<div class=\"categorias\">" + lang.getString('eventos_title_categoria') + ": <div class=\"lista_categorias\">" + categorias + "</div></div>";
+            		HTML += "<div class=\"categorias\"><div class=\"lista_categorias\">" + categorias + "</div></div>";
             		HTML += "<div class=\"titulo\">" + titulo + "</div>";
             		HTML += "<img src=\"images/navigation/forward.jpg\" alt=\"\" />";
-            		HTML += "<div class=\"lugar\">" + lang.getString('eventos_title_lugar') + ": " + lugar + "</div>"
+            		HTML += "<div class=\"lugar\">" + lugar + "</div>"
                         if(cancelado == '1')
                             HTML += "<div class=\"fecha\">" + lang.getString('eventos_detalle_cancelado') + "</div>";
                         else if(fecha != fechaFin)
                             HTML += "<div class=\"fecha\">" + lang.getString('eventos_title_varios_dias_1') + " " + fecha + " " + lang.getString('eventos_title_varios_dias_2') + " " + fechaFin + "</div>";
                         else
                             HTML += "<div class=\"fecha\">" + fecha + "</div>";
-            		HTML += "<div class=\"precio\">" + lang.getString('eventos_title_precio') + ": " + precio + "</div>"
+            		HTML += "<div class=\"precio\">" + precio + "</div>"
             		HTML += "</a></div>";
             		
             		content.append(HTML);
