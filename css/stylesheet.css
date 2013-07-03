@@ -12,6 +12,7 @@ body
 	height: 100%;
 	margin: 0;
 	background-color: #ffffff; /* blanco */
+	font-family: 'FreeSet-Book' !important;
 }
 
 /*.ui-state-persist > .ui-btn-inner{
@@ -74,9 +75,12 @@ body
 }
 .ui-header .ui-btn-right{
 	right:10px;
+	top:13px;
 }
 .ui-header .ui-btn-left{
 	left:24px;
+	top:13px;
+	
 }
 .titulo_seccion{
 	position: relative;
@@ -172,7 +176,8 @@ margin-right: -10px;
 
 .ui-footer .ui-navbar ul li a
 {
-	background: white !important;
+/* 	background: white !important; */
+background: transparent;
 	border: 0 !important;
 }
 
@@ -209,10 +214,10 @@ margin-right: -10px;
 {
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: -51px;
 	z-index: 99;
 	width: 100%;
-	max-height: 200px;
+	
 /* 	display: none; */
 }
 
@@ -263,7 +268,7 @@ margin-right: -10px;
 	border: 0;
 }
 #seleccion_idioma, #seleccion_informacion{
-	box-shadow:  0px 0px 21px -5px !important
+/* 	box-shadow:  0px 0px 21px -5px !important */
 }
 
 .background_seleccionidioma .seleccion_tab_dialog .tab .ui-btn .ui-btn-inner
@@ -303,7 +308,7 @@ text-shadow: none;
 	margin: 0 20px;
 	text-shadow: none;
 	text-align: center;
-	
+font-size:12px;	
 	color: #ffffff; /* blanco */
 }
 
@@ -735,7 +740,7 @@ form#buscador_form .ui-select .ui-btn .ui-btn-inner .ui-icon
 form#buscador_form .ui-select .ui-btn
 {
 	text-align: left;
-	box-shadow: 0 0 30px -8px;
+/* 	box-shadow: 0 0 30px -8px; */
 }
 
 form#buscador_form .ui-input-search .ui-input-clear
@@ -783,7 +788,8 @@ form#buscador_form a#buscar
 {
 	width: 50%;
 height: 33px;
-box-shadow: 0 0 35px -6px;
+/* box-shadow: 0 0 35px -6px; */
+font-size:16px !important;
 border: none;
 }
 
@@ -811,3 +817,5 @@ border-top:none;
 .ui-page-active {
 background: #fff !important;
 }
+
+* {text-shadow: none;}

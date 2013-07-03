@@ -70,11 +70,11 @@ define(function() {
 		
 		
 		favoritos_title : 'Favorits',
-		favoritos_noevents : 'No t&eacute; esdeveniments marcats com a Favorits.',
+		favoritos_noevents : 'No t&eacute; esdeveniments marcats com a Favorits',
 		favoritos_button_agregarfavorito : 'Afegir a Favorits',
-		favoritos_text_favoritoagregado : 'Afegit a Favorits.',
+		favoritos_text_favoritoagregado : 'Afegit a Favorits',
 		favoritos_button_eliminarfavorito : 'Eliminar de Favorits',
-		favoritos_text_favoritoeliminado : 'Eliminat de Favorits.',
+		favoritos_text_favoritoeliminado : 'Eliminat de Favorits',
 		
 		
 		
@@ -94,17 +94,17 @@ define(function() {
 		buscador_string_porfiltros : 'Per filtres',
 		
 		buscador_select_categoria : 'Totes les categories',
-		buscador_select_municipio : 'Totes les municipis',
+		buscador_select_municipio : 'Tots els municipis',
 		buscador_select_fecha : 'Data',
 		buscador_select_precio : 'Preu',
 		
 		buscador_select_fecha_todoslosdias : 'Cada dia',
 		
-		buscador_select_todoslosprecios : 'Todos los precios',
+		buscador_select_todoslosprecios : 'Tots els preus',
 		buscador_select_gratis : 'Gratis',
-		buscador_select_menosde10 : 'Menos de 10 &euro;',
-		buscador_select_10a25 : 'Entre 10 &euro; y 25 &euro;',
-		buscador_select_masde25 : 'Más de 25 &euro;',
+		buscador_select_menosde10 : 'Menys de 10 &euro;',
+		buscador_select_10a25 : 'Entre 10 &euro; i 25 &euro;',
+		buscador_select_masde25 : 'Més de 25 &euro;',
 		
 		
 		buscador_button_buscar : 'Cercar',
