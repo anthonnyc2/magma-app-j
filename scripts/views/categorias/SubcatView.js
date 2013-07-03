@@ -46,29 +46,23 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             		url: url,
             		
             		parse:function(resp)
-            		{
-                            //if(resp != ''){
-            			$this.subcategoriasList = resp;
-            			$this.subcategoriasList.sort(function(a,b) {
-            				var text = "subcategoria_" + lang.getString('language_suffix');
-            				var A = a[text], B = b[text];
+            		{ 
+                            $this.subcategoriasList = resp;
+                            $this.subcategoriasList.sort(function(a,b) {
+            			var text = "subcategoria_" + lang.getString('language_suffix');
+            			var A = a[text], B = b[text];
             				
-            				return (A < B) ? -1 : ( (A > B) ? 1 : 0 );
-            			});
+                                return (A < B) ? -1 : ( (A > B) ? 1 : 0 );
+                            });
             			
-            			// Agregar elemento "Todas las subcategorías" al inicio 
-            			var allSubcatsEl = {
-            				id: -1
-            			};
-            			allSubcatsEl["subcategoria_" + lang.getString('language_suffix')] = lang.getString('subcategorias_allsubcategories');
-            			$this.subcategoriasList.unshift(allSubcatsEl);
-            			
-            			$this.redrawView();
-                            /*}
-                            else{
-                                alert("no hay subcategorias")
-                                $this.subcat_clickHandler();
-                            }*/
+                            // Agregar elemento "Todas las subcategorías" al inicio 
+                            var allSubcatsEl = {
+                            	id: -1
+                            };
+                            allSubcatsEl["subcategoria_" + lang.getString('language_suffix')] = lang.getString('subcategorias_allsubcategories');
+                            $this.subcategoriasList.unshift(allSubcatsEl);
+            		
+                            $this.redrawView(); 
             		}
             	});
             	
@@ -156,31 +150,16 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             
             subcat_clickHandler:function(evt)
             {
-                
-                //if(typeof evt != 'undefined'){
-                    evt.preventDefault();
-                    var id_attr = $(evt.currentTarget).attr('id');
-                    var id_cat = this.idCat;
-                    var nombre_cat = this.nombreCat;
+                evt.preventDefault();
+                var id_attr = $(evt.currentTarget).attr('id');
+                var id_cat = this.idCat;
+                var nombre_cat = this.nombreCat;
 
-                    var id_subcat = id_attr.substring(16, id_attr.length);
-                    var nombre_subcat = $("h4", evt.currentTarget).text(); 
+                var id_subcat = id_attr.substring(16, id_attr.length);
+                var nombre_subcat = $("h4", evt.currentTarget).text(); 
 
-                    var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
-                    $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
-                /*}
-                else{
-                    var id_cat = this.idCat;
-                    var nombre_cat = this.nombreCat;
-
-                    var id_subcat = -1
-                    var nombre_subcat = ""
-                    
-                    alert("No tiene sub lleno todas "+$this.idCat+"-"+id_cat);
-
-                    var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
-                    $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
-                }*/
+                var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
+                $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
             }
 
         });

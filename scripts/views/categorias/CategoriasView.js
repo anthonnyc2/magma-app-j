@@ -128,16 +128,42 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             	var nombre_cat = $("h4", evt.currentTarget).text();
             	
             	var newView = null;
+                
+                
             	if (id_cat == -1) // Todas las subcategorías, pasar directo a la vista de resultados
             	{
-            		newView = new EventResultsView(id_cat, nombre_cat);
+                    newView = new EventResultsView(id_cat, nombre_cat);
+                    $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
             	}
             	else // Seleccionada categoría, mostrar subcategorías
-            	{
-            		newView = new SubcatView(id_cat, nombre_cat, -1, "");
+            	{ 
+                    var Subcategory = Backbone.Model.extend({
+                            defaults: {
+                                    id: null,
+                                    categoriasId: null,
+                                    subcategoria_esp: null,
+                                    subcategoria_cat: null
+                            }
+                    });
+                    var url = urls.subcategorias.replace("<id_cat>", id_cat);
+                    var Subcategories = Backbone.Collection.extend({
+                            model: Subcategory,
+                            url: url,
+                            parse:function(resp)
+                            {
+                                if(resp != ''){
+                                    newView = new SubcatView(id_cat, nombre_cat, -1, ""); 
+                                    $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
+                                }
+                                else{ 
+                                    newView = new EventResultsView(id_cat, nombre_cat, '-1', nombre_cat); 
+                                    $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
+                                }
+                            }
+                    }); 
+                    var subcats = new Subcategories();
+                    subcats.fetch();
             	}
-            	
-				$.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
             }
 
         });

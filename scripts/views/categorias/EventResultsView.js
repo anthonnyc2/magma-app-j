@@ -17,7 +17,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
 			loading: true,
 			
             events:{
-            	'pagebeforeshow' : 'redrawView',
+            	//'pagebeforeshow' : 'redrawView',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
                 'click .ui-footer .ui-navbar ul li a' : 'navBar_clickHandler',
                 'click a[data-rel=back]' : 'btnBack_clickHandler',
@@ -74,13 +74,12 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             	}
             	else if (id_subcat == -1) // Todas las subcategorías de la categoría
             	{
-            		url_peticion = urls.eventos_cat.replace("<id_cat>", id_cat);
-                        //alert(url_peticion);
+            		url_peticion = urls.eventos_cat.replace("<id_cat>", id_cat); 
             	}
             	else // Eventos de la subcategoría especificada
             	{
             		url_peticion = urls.eventos_subcat.replace("<id_subcat>", id_subcat);
-            	}
+            	} 
             	
             	var EventosCollection = Backbone.Collection.extend({
             		model	: EventosModel,
