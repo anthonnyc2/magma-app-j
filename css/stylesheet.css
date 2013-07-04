@@ -121,7 +121,7 @@ margin-right: -10px;
 .ui-header a.magma_logo
 {
 	position: absolute;
-	left: 147px;
+	left: 112px;
 	top: -8px;
 	box-shadow: none;
 	border: 0;
@@ -398,28 +398,28 @@ div.destacados_home a div.titulo
 {
 	font-weight: bold;
 	max-width: 95%;
-	margin-top: 7px;
+	margin-top: 4px;
 }
 
 div.destacados_home a div.lugar
 {
 	font-size: 10pt;
 	color: #606060; /* gris oscuro */
-	margin-top: 7px;
+	margin-top: 5px;
 }
 
 div.destacados_home a div.fecha
 {
 	font-size: 10pt;
 	color: #606060; /* gris oscuro */
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 div.destacados_home a div.precio
 {
 	font-size: 10pt;
 	color: #606060; /* gris oscuro */
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 /*
@@ -764,7 +764,7 @@ form#buscador_form .ui-field-contain .ui-input-search{
 	margin-top: 10px;
 }
 form#buscador_form label.ui-select{
-	margin-top: 25px;
+	margin-top: 10px;
 }
 form#buscador_form .ui-field-contain{
 	border-bottom: 0px;
@@ -791,6 +791,7 @@ height: 33px;
 /* box-shadow: 0 0 35px -6px; */
 font-size:16px !important;
 border: none;
+margin-top:10px;
 }
 
 form#buscador_form a#buscar .ui-btn-inner
@@ -819,3 +820,9 @@ background: #fff !important;
 }
 
 * {text-shadow: none;}
+
+form#buscador_form .ui-select .ui-btn .ui-btn-inner {
+
+font-weight: normal;
+font-size:14px;
+}
