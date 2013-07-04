@@ -130,15 +130,15 @@ define(['require', 'urls', 'languages', 'jquery', 'underscore', 'Backbone', 'vie
             		
             		
             		var HTML = "<div class=\"destacados_home\"><a href=\"#detalleEvento\" class=\"ui-btn\" id=\"evento-" + i + "\">";
-            		HTML += "<div class=\"categorias\">" + lang.getString('eventos_title_categoria') + ": <div class=\"lista_categorias\">" + categorias + "</div></div>";
+            		HTML += "<div class=\"categorias\"> <div class=\"lista_categorias\">" + categorias + "</div></div>";
             		HTML += "<div class=\"titulo\">" + titulo + "</div>";
             		HTML += "<img src=\"images/navigation/forward.jpg\" alt=\"\" />";
-            		HTML += "<div class=\"lugar\">" + lang.getString('eventos_title_lugar') + ": " + lugar + "</div>"
+            		HTML += "<div class=\"lugar\">" + lugar + "</div>"
                         if(fecha != fechaFin)
                             HTML += "<div class=\"fecha\">" + lang.getString('eventos_title_varios_dias_1') + " " + fecha + " " + lang.getString('eventos_title_varios_dias_2') + " " + fechaFin + "</div>"
                         else
-                            HTML += "<div class=\"fecha\">" + lang.getString('eventos_title_dia') + ": " + fecha + "</div>"
-            		HTML += "<div class=\"precio\">" + lang.getString('eventos_title_precio') + ": " + precio + "</div>"
+                            HTML += "<div class=\"fecha\">" + fecha + "</div>"
+            		HTML += "<div class=\"precio\">" + precio + "</div>"
             		HTML += "</a></div>";
             		
             		container.append(HTML);
