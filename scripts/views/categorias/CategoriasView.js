@@ -137,6 +137,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             	}
             	else // Seleccionada categoría, mostrar subcategorías
             	{ 
+                    // Consulta para revisar si dicha categoria tiene subcategorias si no, muestra eventos para esa categoria
                     var Subcategory = Backbone.Model.extend({
                             defaults: {
                                     id: null,
@@ -156,7 +157,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
                                     $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
                                 }
                                 else{ 
-                                    newView = new EventResultsView(id_cat, nombre_cat, '-1', nombre_cat); 
+                                    newView = new EventResultsView(id_cat, nombre_cat, '-1', ""); 
                                     $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
                                 }
                             }

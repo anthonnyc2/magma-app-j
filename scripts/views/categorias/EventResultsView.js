@@ -17,7 +17,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
 			loading: true,
 			
             events:{
-            	//'pagebeforeshow' : 'redrawView',
+            	'pagebeforeshow' : 'redrawView',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
                 'click .ui-footer .ui-navbar ul li a' : 'navBar_clickHandler',
                 'click a[data-rel=back]' : 'btnBack_clickHandler',
