@@ -13,7 +13,8 @@
 		%>
 			<a href="<%= info_publicidad['publicidad_link'] %>" id="publicidad">
 		<% } %>
-			<img src="<%= info_publicidad['publicidad_img'] + forceReloadImage %>" alt="" style="width: auto; height: auto; max-width: 100%; max-height: 100%;" />
+
+			<img src="<%= info_publicidad['publicidad_img'] %>" alt="" style="width: auto; height: auto; max-width: 100%; max-height: 100%;" /> 
 		<%
 			if (hasLink) {
 		%>
