@@ -82,11 +82,14 @@ require(['urls', 'languages', 'domReady', 'Backbone', 'views/publicidad/Publicid
                 var homeView = new HomeView();
                 var seleccionIdiomaView = ( !lang.issetLanguage() ) ? new SeleccionIdiomaView() : null;
                 var publicidadView = info_publicidad['publicidad'] == true ? new PublicidadView(info_publicidad) : null;
+                //le agrego el dominio de las imagenes para la publicidad.
+                info_publicidad['publicidad_img'] = urls.img_evento+info_publicidad['publicidad_img'];
                 
                 // Insertar vistas en la stack
                 $.mobile.jqmNavigator.pushView(homeView, { transition : 'none' });
                 if ( seleccionIdiomaView ) $.mobile.jqmNavigator.pushView( seleccionIdiomaView, { transition : 'none' } );
-                //if ( publicidadView ) $.mobile.jqmNavigator.pushView( publicidadView, { transition : 'none' } );
+                // Inserta la publicidad en el home cuando publicidadView es true.
+                if ( publicidadView ) $.mobile.jqmNavigator.pushView( publicidadView, { transition : 'none' } );
             }
 
             if (navigator.userAgent.match(/(iPad|iPhone|Android)/)) {
