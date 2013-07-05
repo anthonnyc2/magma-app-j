@@ -199,10 +199,13 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
                                           
                   if (moduleFile)
                   {
+                    $.mobile.silentScroll(0);
+                    setTimeout(function() {
                         ClaseVista = require(moduleFile);
                         var newView = new ClaseVista();
                         $.mobile.jqmNavigator.popToFirst({ transition : 'none' });
                         $.mobile.jqmNavigator.pushView(newView);
+                    }, 20);
                   }
             },
             
@@ -283,9 +286,12 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/eventos/
             	
             	var info_evento = this.lista_resultados[index_evento];
                   bandera_destacados = 0;
-            	
-			var detalleEventoView = new DetalleEventoView(info_evento);
-            	$.mobile.jqmNavigator.pushView(detalleEventoView, { transition: 'slide' });
+
+                $.mobile.silentScroll(0);
+                setTimeout(function() { 
+                    var detalleEventoView = new DetalleEventoView(info_evento);
+                    $.mobile.jqmNavigator.pushView(detalleEventoView, { transition: 'slide' });
+                }, 20);
             }
 
         });

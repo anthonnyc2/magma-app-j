@@ -92,10 +92,13 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
                                           
             	if (moduleFile)
             	{
-            		ClaseVista = require(moduleFile);
-            		var newView = new ClaseVista();
-            		$.mobile.jqmNavigator.popToFirst({ transition : 'none' });
-            		$.mobile.jqmNavigator.pushView(newView);
+                    $.mobile.silentScroll(0);
+                    setTimeout(function() {
+                        ClaseVista = require(moduleFile);
+                        var newView = new ClaseVista();
+                        $.mobile.jqmNavigator.popToFirst({ transition : 'none' });
+                        $.mobile.jqmNavigator.pushView(newView);
+                    }, 20);
             	}
             },
 
@@ -158,8 +161,11 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
                 var id_subcat = id_attr.substring(16, id_attr.length);
                 var nombre_subcat = $("h4", evt.currentTarget).text(); 
 
-                var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
-                $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
+                $.mobile.silentScroll(0);
+                setTimeout(function() {
+                    var eventResultsView = new EventResultsView(id_cat, nombre_cat, id_subcat, nombre_subcat);
+                    $.mobile.jqmNavigator.pushView(eventResultsView, { transition: 'slide' });
+                }, 20);
             }
 
         });

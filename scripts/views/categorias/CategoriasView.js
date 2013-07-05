@@ -13,7 +13,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
 			loading: true,
 			
             events:{
-            	'pageshow' : 'refreshCategories',
+            	'pageshow' : 'refreshCategories', 
             	'click .more_button' : 'More_clickHandler',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
                 'click .ui-footer .ui-navbar ul li a' : 'navBar_clickHandler',
@@ -64,7 +64,7 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
             	var cats = new Categories();
             	cats.fetch();
             	
-            },
+            }, 
 
             render:function () {
             	this.$el.html( _.template( ViewTemplate, lang.getStringList() ) );
@@ -152,14 +152,17 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/categori
                             url: url,
                             parse:function(resp)
                             {
-                                if(resp != ''){
-                                    newView = new SubcatView(id_cat, nombre_cat, -1, ""); 
-                                    $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
-                                }
-                                else{ 
-                                    newView = new EventResultsView(id_cat, nombre_cat, '-1', ""); 
-                                    $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
-                                }
+                                $.mobile.silentScroll(0);
+                                setTimeout(function() {
+                                    if(resp != ''){
+                                        newView = new SubcatView(id_cat, nombre_cat, -1, "");
+                                        $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
+                                    }
+                                    else{
+                                        newView = new EventResultsView(id_cat, nombre_cat, '-1', "");
+                                        $.mobile.jqmNavigator.pushView( newView, { transition: 'slide' } );
+                                    }
+                                }, 20);
                             }
                     }); 
                     var subcats = new Subcategories();

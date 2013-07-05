@@ -206,9 +206,12 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'views/more/Mor
             	
             	var info_evento = this.destacadosList[index_evento];
                   bandera_destacados = 1;
-            	
-            	var detalleEventoView = new DetalleEventoView(info_evento);
-            	$.mobile.jqmNavigator.pushView(detalleEventoView, { transition : 'slide' });
+
+                $.mobile.silentScroll(0);
+                setTimeout(function() {
+                    var detalleEventoView = new DetalleEventoView(info_evento);
+                    $.mobile.jqmNavigator.pushView(detalleEventoView, { transition : 'slide' });
+                }, 20);
             }
         });
         return View;
