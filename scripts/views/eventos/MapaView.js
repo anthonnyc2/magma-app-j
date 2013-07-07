@@ -14,7 +14,8 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'text!views/eve
             events:{
             	'pageshow' : 'redrawView',
                 'click .ui-header a.magma_logo' : 'Home_clickHandler',
-                'click a[data-rel=back]' : 'btnBack_clickHandler'
+                'click a[data-rel=back]' : 'btnBack_clickHandler',
+                'click .ui-footer .ui-navbar ul li a' : 'navBar_clickHandler'
             },
             
             initialize: function(infoEvento)
@@ -52,6 +53,24 @@ define(['urls', 'languages', 'jquery', 'underscore', 'Backbone', 'text!views/eve
             {
             	evt.preventDefault();
             	$.mobile.jqmNavigator.popView();
+            },
+
+            navBar_clickHandler: function(evt)
+            {
+                evt.preventDefault();
+                var itemHref = $(evt.currentTarget).attr('href');
+                var ClaseVista = null;
+                var moduleFile = itemHref == "#categorias" ? "views/categorias/CategoriasView" : (itemHref == "#buscador" ? "views/buscador/BuscadorView" : null);
+                if(itemHref == "#favoritos")
+                    moduleFile = "views/favoritos/FavoritosView";
+
+                if(moduleFile)
+                {
+                    ClaseVista = require(moduleFile);
+                    var newView =  new ClaseVista();
+                    $.mobile.jqmNavigator.popToFirst({ transition:  'none' });
+                    $.mobile.jqmNavigator.pushView(newView);
+                }
             },
             
             redrawView: function()
