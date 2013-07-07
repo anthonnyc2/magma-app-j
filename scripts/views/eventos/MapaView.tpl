@@ -32,7 +32,7 @@
 
 
 <!-- HOME - footer -->
-<!--<div data-role="footer" data-id="home-footer" id="home-footer" data-position="fixed">
+<div data-role="footer" data-tap-toggle="false" data-id="home-footer" id="home-footer" data-position="fixed">
 	<div data-role="navbar" data-iconpos="top">
 		<ul>
 			<li>
@@ -48,5 +48,5 @@
 			</li>
 		</ul>
 	</div>
-</div>-->
+</div>
 <!-- FIN: HOME - footer -->
