@@ -22,5 +22,5 @@
 		</div>
 	</div>
 	
-	<img src="images/seleccionidioma/background.png" alt="" class="background_seleccionidioma-image" />
+	<!-- <img src="images/seleccionidioma/background.png" alt="" class="background_seleccionidioma-image" /> -->
 </div>

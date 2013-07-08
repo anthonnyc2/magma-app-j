@@ -61,12 +61,12 @@ define(['languages', 'jquery', 'underscore', 'Backbone', 'text!views/more/MoreVi
             
             redrawView: function()
             {
-            	$(".ui-page").css('height', '700px');
+            	//$(".ui-page").css('height', '700px');
             },
             
             restoreView: function()
             {
-            	$(".ui-page").css('height', '74%');
+            	//$(".ui-page").css('height', '74%');
             }
 
         });
